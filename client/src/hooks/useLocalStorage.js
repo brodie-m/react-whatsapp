@@ -10,4 +10,9 @@ export default function useLocalStorage(key, initialValue) {
         if (typeof initialValue === 'function') {return initialValue()}
         else {return initialValue}
     })
+
+    useEffect(() => {
+        localStorage.setItem(prefixedKey, JSON.stringify(value))
+    }, [prefixedKey,value])
+    return [value, setValue]
 }
