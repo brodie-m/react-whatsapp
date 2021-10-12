@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import useLocalStorage from '../hooks/useLocalStorage'
-
+console.log('i have been called')
 const ContactsContext = React.createContext()
 
 export function useContacts() {
